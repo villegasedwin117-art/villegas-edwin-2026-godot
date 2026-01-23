@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkf1y41002yb7"]
+[gd_scene load_steps=6 format=3 uid="uid://dkf1y41002yb7"]
 
 [ext_resource type="Texture2D" uid="uid://e71k61jc78up" path="res://icon.svg" id="1_v3uhd"]
 [ext_resource type="FontFile" uid="uid://tsr27aoxsgb3" path="res://fonts/PixelOperator8-Bold.ttf" id="2_6we3w"]
@@ -7,12 +7,10 @@
 [sub_resource type="LabelSettings" id="LabelSettings_8ra5a"]
 font = ExtResource("2_6we3w")
 
-[node name="Main Level" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6we3w"]
+size = Vector2(124, 126)
 
-[node name="Floor" type="Sprite2D" parent="."]
-position = Vector2(891, 684.5)
-scale = Vector2(0.99999976, 0.53906274)
-texture = ExtResource("1_v3uhd")
+[node name="Main Level" type="Node2D"]
 
 [node name="Edwin Villegas Label" type="Label" parent="."]
 offset_left = 788.0
@@ -28,3 +26,14 @@ zoom = Vector2(4, 4)
 
 [node name="Player" parent="." instance=ExtResource("3_qmak7")]
 position = Vector2(891, 644)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(892.00006, 663)
+scale = Vector2(2.1309586, 0.11479379)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+texture = ExtResource("1_v3uhd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("RectangleShape2D_6we3w")
