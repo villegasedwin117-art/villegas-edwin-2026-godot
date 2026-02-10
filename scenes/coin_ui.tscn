@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3058m6vuoq7f"]
+
+[ext_resource type="Script" uid="uid://rmhagxgjxeqx" path="res://scenes/coin_ui.gd" id="1_to2q1"]
+[ext_resource type="FontFile" uid="uid://tsr27aoxsgb3" path="res://fonts/PixelOperator8-Bold.ttf" id="2_rkybt"]
+
+[node name="CoinUI" type="CenterContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_to2q1")
+
+[node name="HboxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="CoinLabel" type="Label" parent="HboxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_rkybt")
+text = "$$$:  #"
+horizontal_alignment = 1
+
+[node name="CoinCount" type="Label" parent="HboxContainer"]
+layout_mode = 2
